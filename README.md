@@ -1,5 +1,10 @@
-# Iniciar Servicio de Monitoreo con Docker
-- Abrir o Crear Carpeta del Proyecto 
+# Uptime Monitors ELK
+
+Supervise la disponibilidad de los servicios con sondeo activo. Dada una lista de URL, Heartbeat hace una simple pregunta: ¿Estás vivo?
+Envia la informacion a su Elastic y se muetras en kibana
+
+## Iniciar Servicio de Monitoreo
+- Abriri Carpeta del Proyecto 
 ```bash
   cd /monitoreo/servicio
 ```
@@ -7,15 +12,15 @@
 ```bash
   vim heartbeat.yml
 ```
-- Buildear la imagen del nuevo servicio
+- Editar buildear la imagen del nuevo servicio
 ```bash
-  docker build -t heartbeat-image .
+  docker build -t heartbeat-servicio .
 ```
-- Arrancar el servicio con la nueva imagen
+- Editar arrancar el servicio con la nueva imagen
 ```bash
-  docker run --name heartbeat-image -d heartbeat-servicio
+  docker run -it --name heartbeat-servicio -d heartbeat-servicio
 ```
-- Para dejar de mandar datos eliminar el contenedor
+- para dejar de mandar datos eliminar el contenedor
 ```bash
   docker rm -f heartbeat-servicio
 ```
