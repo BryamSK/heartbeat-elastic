@@ -19,4 +19,3 @@
 ```bash
   docker rm -f heartbeat-servicio
 ```
-- 
