@@ -6,7 +6,10 @@ Envia la informacion a su Elastic y se muetras en kibana
 ## Iniciar Servicio de Monitoreo
 - Clonamos el repo
 ```bash
-  git clone 
+  git clone https://github.com/BryamSK/heartbeat-elastic.git
+  cd heartbeat-elastic
+  ls
+  dockerfile  heartbeat.yml  README.md
 ```
 - Editar heartbeat.yml, agregamos los datos del servidor elastic y kibana, agregamos los servicios que queremos monitorear
 ```bash
