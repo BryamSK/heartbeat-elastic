@@ -27,7 +27,7 @@ Envia la informacion a su Elastic y se muetras en kibana
   #protocol: "https"
   #ssl.verification_mode: none
   #username: "elastic"
-  #password: "DhyFASfg0xy*j!IyBYK#PtMt"
+  #password: "changeme"
   #index: "index_name%{+yyyy.MM.dd}"
 
 #Host Elasticsearch HTTP
