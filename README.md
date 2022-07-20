@@ -1,2 +1,22 @@
-# heartbeat-elastic
-Monitores de tiempo de actividad, Supervise la disponibilidad de los servicios con sondeo activo con ELK. Dada una lista de URL, Heartbeat hace una simple pregunta: ¿Estás vivo?
+# Iniciar Servicio de Monitoreo
+- Abrir o Crear Carpeta del Proyecto 
+```bash
+  cd /monitoreo/servicio
+```
+- Editar heartbeat.yml y cambiar los datos del indice
+```bash
+  vim heartbeat.yml
+```
+- Buildear la imagen del nuevo servicio
+```bash
+  docker build -t heartbeat-image .
+```
+- Arrancar el servicio con la nueva imagen
+```bash
+  docker run --name heartbeat-image -d heartbeat-servicio
+```
+- Para dejar de mandar datos eliminar el contenedor
+```bash
+  docker rm -f heartbeat-servicio
+```
+- 
