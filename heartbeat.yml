@@ -31,14 +31,8 @@ heartbeat.monitors:
 # ======================= Elasticsearch template setting =======================
 
 setup.template.settings:
-index.number_of_shards: 1
-setup.template.name: "index_name%{+yyyy.MM.dd}"
-setup.template.pattern: "index_name%{+yyyy.MM.dd}"
-setup.ilm.enabled: false
-
-  #setup.template.settings:
-  #index.number_of_shards: 1
-  #index.codec: best_compression
+  index.number_of_shards: 1
+  index.codec: best_compression
   #_source.enabled: false
 
 # ================================== General ===================================
@@ -198,4 +192,3 @@ processors:
 
 # This allows to enable 6.7 migration aliases
 #migration.6_to_7.enabled: true
-
