@@ -4,9 +4,9 @@ Supervise la disponibilidad de los servicios con sondeo activo. Dada una lista d
 Envia la informacion a su Elastic y se muetras en kibana
 
 ## Iniciar Servicio de Monitoreo
-- Abriri Carpeta del Proyecto 
+- Clonamos el repo
 ```bash
-  cd /monitoreo/servicio
+  git clone 
 ```
 - Editar heartbeat.yml, agregamos los datos del servidor elastic y kibana, agregamos los servicios que queremos monitorear
 ```bash
