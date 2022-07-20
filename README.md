@@ -8,9 +8,45 @@ Envia la informacion a su Elastic y se muetras en kibana
 ```bash
   cd /monitoreo/servicio
 ```
-- Editar heartbeat.yml y cambiar los datos del indice
+- Editar heartbeat.yml, agregamos los datos del servidor elastic y kibana, agregamos los servicios que queremos monitorear
 ```bash
   vim heartbeat.yml
+  
+# =================================== Kibana ===================================
+#Host kibana HTTPS
+  #host: "https://localhost:5601"
+  #ssl.verification_mode: none
+#Host kibana HTTP
+  #host: "localhost:5601"
+  
+  
+ # ---------------------------- Elasticsearch Output ----------------------------
+#Host Elasticsearch HTTPS
+#output.elasticsearch:
+  #hosts: ["localhost:9200"]
+  #protocol: "https"
+  #ssl.verification_mode: none
+  #username: "elastic"
+  #password: "DhyFASfg0xy*j!IyBYK#PtMt"
+  #index: "index_name%{+yyyy.MM.dd}"
+
+#Host Elasticsearch HTTP
+#output.elasticsearch:
+  #hosts: ["localhost:9200"]
+  #protocol: "http"
+  #username: "elastic"
+  #password: "changeme"
+
+  
+```
+- Editar heartbeat.yml para agregamos los servicios que queremos monitorear
+```bash
+  heartbeat.monitors:
+      - type: icmp
+      id: service-ping
+      name: service-ping
+      hosts: ["service.com"]
+      schedule: '*/5 * * * * * *'
 ```
 - Editar buildear la imagen del nuevo servicio
 ```bash
