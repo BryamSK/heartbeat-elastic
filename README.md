@@ -18,7 +18,7 @@ Envia la informacion a su Elastic y se muetras en kibana
 ```
 - Editar arrancar el servicio con la nueva imagen
 ```bash
-  docker run -it --name heartbeat-servicio -d heartbeat-servicio
+  docker run --name heartbeat-servicio -d heartbeat-servicio
 ```
 - para dejar de mandar datos eliminar el contenedor
 ```bash
