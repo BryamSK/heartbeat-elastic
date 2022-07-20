@@ -1,4 +1,4 @@
-# Uptime Monitors ELK
+# Uptime Monitors ELK - Docker Service
 
 Supervise la disponibilidad de los servicios con sondeo activo. Dada una lista de URL, Heartbeat hace una simple pregunta: ¿Estás vivo?
 Envia la informacion a su Elastic y se muetras en kibana
