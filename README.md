@@ -42,7 +42,7 @@ Envia la informacion a su Elastic y se muetras en kibana
 
   
 ```
-- Editar heartbeat.yml para agregamos los servicios que queremos monitorear
+- Editar heartbeat.yml para agregar los servicios que queremos monitorear
 ```bash
   heartbeat.monitors:
       - type: icmp
