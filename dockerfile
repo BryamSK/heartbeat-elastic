@@ -15,4 +15,4 @@ WORKDIR /etc/heartbeat/
 COPY ./heartbeat.yml /etc/heartbeat/heartbeat.yml
 RUN service heartbeat-elastic start
 RUN heartbeat setup
-ENTRYPOINT heartbeat setup && service heartbeat-elastic start && tail -f /var/log/heartbeat/heartbeat
+ENTRYPOINT heartbeat -e
